@@ -1,0 +1,46 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.container {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  padding-right: 2rem /* 32px */;
+  padding-left: 2rem /* 32px */;
+}
+
+@media (width < 640px) {
+  .container {
+    padding-right: 10px;
+    padding-left: 10px;
+  }
+}
+
+@media (640px <= width < 768px) {
+  .container {
+    padding-right: 24px;
+    padding-left: 24px;
+  }
+}
+
+@media (min-width: 1400px) {
+  .container {
+    max-width: 1400px;
+  }
+}
+
+/* For Webkit-based browsers (Chrome, Safari and Opera) */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+/* For IE, Edge and Firefox */
+.scrollbar-hide {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.mask-pill {
+  mask-image: url("data:image/svg+xml,%3Csvg width='36' height='14' xmlns='http://www.w3.org/2000/svg'%3E%3Crect x='0.635742' y='0.972656' width='34.7061' height='12.9881' rx='6.49406' fill='black' fillRule='nonzero'/%3E%3C/svg%3E%0A");
+}
